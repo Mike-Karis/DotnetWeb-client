@@ -10,8 +10,7 @@ $(function(){
                 // reset the audio
                 toast.currentTime = 0;
         // play audio
-        toast.play();
-        console.log($(this).data('product'));
+        toast.play();;
         $( ".code" ).data( "test", { first: $(this).data('product'), last: $(this).data('code') } );
         $( "strong#product" ).text( $( ".code" ).data( "test" ).first );
         $( "strong#code" ).text( $( ".code" ).data( "test" ).last );
@@ -21,7 +20,7 @@ $(function(){
     var elem = "#toast"; 
 $( document ).on( 'keydown', function ( e ) {
     if ( e.keyCode === 27 ) { // ESC
-        $( elem ).hide();
+        $( elem ).toast('hide');
     }
 });
 });
