@@ -1,4 +1,5 @@
 $(function(){
+    
      // preload audio
      var toast = new Audio('media/toast.wav');
 
@@ -10,6 +11,11 @@ $(function(){
                 toast.currentTime = 0;
         // play audio
         toast.play();
+        console.log($(this).data('product'));
+        $( ".code" ).data( "test", { first: $(this).data('product'), last: $(this).data('code') } );
+        $( "strong#product" ).text( $( ".code" ).data( "test" ).first );
+        $( "strong#code" ).text( $( ".code" ).data( "test" ).last );
+
         $('#toast').toast({ autohide: false }).toast('show');
     });
     var elem = "#toast"; 
