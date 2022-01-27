@@ -12,4 +12,10 @@ $(function(){
         toast.play();
         $('#toast').toast({ autohide: false }).toast('show');
     });
+    var elem = "#toast"; 
+$( document ).on( 'keydown', function ( e ) {
+    if ( e.keyCode === 27 ) { // ESC
+        $( elem ).hide();
+    }
+});
 });
