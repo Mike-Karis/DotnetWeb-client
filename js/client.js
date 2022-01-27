@@ -1,6 +1,6 @@
 $(function(){
      // preload audio
-     var toast = new Audio('toast.wav');
+     var toast = new Audio('media/toast.wav');
 
     $('.code').on('click', function(e) {
         e.preventDefault();
