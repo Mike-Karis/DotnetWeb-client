@@ -17,4 +17,10 @@ $(function(){
          $('#' + this.id + 'Img').removeClass().addClass('animate__animated animate__bounceInDown') :
          $('#' + this.id + 'Img').addClass('animate__animated animate__bounceOutUp');
     });
+    $('#submit').on("click", function(e){
+        e.preventDefault();
+        if($('#red').prop('checked')==false && $('#green').prop('checked')==false && $('#blue').prop('checked')==false){
+            $('#toast').toast({ autohide: false }).toast('show');
+        }
+    });
 });
