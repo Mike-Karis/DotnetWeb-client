@@ -8,6 +8,30 @@ $(function(){
     $('.form-check-input').each(function () {
         $(this).prop('checked', false);
     });
+    $('#all').on('change', function () {
+        if($('#all').prop('checked')==true){
+        $('.form-check-input').each(function () {
+            $(this).prop('checked', true);
+            // make the image visible
+        $('#' + this.id + 'Img').css('visibility', 'visible')
+        // animate balloon in/out based on checkbox
+        $(this).is(':checked') ?
+         $('#' + this.id + 'Img').removeClass().addClass('animate__animated animate__bounceInDown') :
+         $('#' + this.id + 'Img').addClass('animate__animated animate__bounceOutUp');
+        });
+        }
+        else if($('#all').prop('checked')==false){
+            $('.form-check-input').each(function () {
+                $(this).prop('checked', false);
+                // make the image visible
+        $('#' + this.id + 'Img').css('visibility', 'visible')
+        // animate balloon in/out based on checkbox
+        $(this).is(':checked') ?
+         $('#' + this.id + 'Img').removeClass().addClass('animate__animated animate__bounceInDown') :
+         $('#' + this.id + 'Img').addClass('animate__animated animate__bounceOutUp');
+            });
+            }
+    });
       // event listener for check/uncheck
       $('.form-check-input').on('change', function () {
         // make the image visible
