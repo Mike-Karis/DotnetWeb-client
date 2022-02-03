@@ -32,6 +32,13 @@ $(function(){
             });
             }
     });
+    if($('.form-check-label').hover()){
+    $('.form-check-label').hover(function(){
+        $('h1').css("color",this.id);
+    }, function(){
+        $('h1').css("color", "grey");
+    });
+    }
       // event listener for check/uncheck
       $('.form-check-input').on('change', function () {
         // make the image visible
